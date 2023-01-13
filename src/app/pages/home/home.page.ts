@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -6,8 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
+  
+  createPickupCall() {
+    this.router.navigate(['pickup-call']);
+  }
+  goToPickupCalls() {
+    this.router.navigate(['pickup-calls']);
+  }
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }

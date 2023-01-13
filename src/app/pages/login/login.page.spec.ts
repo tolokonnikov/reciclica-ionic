@@ -12,8 +12,8 @@ describe('LoginPage', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ LoginPage ],
-      imports: [IonicModule.forRoot(), AppRoutingModule]
+      declarations: [LoginPage],
+      imports: [IonicModule.forRoot(), AppRoutingModule],
     }).compileComponents();
 
     fixture = TestBed.createComponent(LoginPage);
@@ -28,17 +28,16 @@ describe('LoginPage', () => {
   });
 
   it('should go to home after login', () => {
-    spyOn(router,'navigate');
+    spyOn(router, 'navigate');
     component.login();
 
     expect(router.navigate).toHaveBeenCalledOnceWith(['home']);
   });
 
   it('should go to home after register', () => {
-    spyOn(router,'navigate');
+    spyOn(router, 'navigate');
     component.register();
 
     expect(router.navigate).toHaveBeenCalledOnceWith(['register']);
   });
-
 });

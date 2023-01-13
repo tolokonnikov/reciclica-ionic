@@ -7,14 +7,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./register.page.scss'],
 })
 export class RegisterPage implements OnInit {
+  constructor(private router: Router) {}
 
-  constructor(private router:Router) { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  register() {
+    this.router.navigate(['home']);
   }
-
-  register(){
-this.router.navigate(['home']);
-  }
-
 }

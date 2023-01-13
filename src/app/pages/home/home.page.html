@@ -33,11 +33,18 @@
     <ion-card-header header>
       <ion-card-subtitle>List pick up calls</ion-card-subtitle>
     </ion-card-header>
-    <ion-button footer size="full" color="success" fill="clear">See all...</ion-button>
+    <ion-button
+      footer
+      size="full"
+      color="success"
+      fill="clear"
+      (click)="goToPickupCalls()"
+      >See all...</ion-button
+    >
   </app-pickup-call-card>
 
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button color="success">
+    <ion-fab-button color="success" (click)="createPickupCall()">
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
   </ion-fab>
