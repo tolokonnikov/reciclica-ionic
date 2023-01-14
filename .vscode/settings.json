@@ -1,3 +1,4 @@
 {
-  "ionic.previewInEditor": true
+  "ionic.previewInEditor": true,
+  "sarif-viewer.connectToGithubCodeScanning": "off"
 }
