@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { AbstractControl } from '@angular/forms';
+import { AbstractControl, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-error-message',
@@ -8,7 +8,7 @@ import { AbstractControl } from '@angular/forms';
 })
 export class ErrorMessageComponent implements OnInit {
   @Input() message: string;
-  @Input() field: AbstractControl;
+  @Input() field: FormControl;
 
   constructor() {}
 

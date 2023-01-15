@@ -20,6 +20,7 @@ describe('ErrorMessageComponent', () => {
   }));
 
   it('should show error message on field touched and error present', () => {
+    //component.ngOnInit();
     // component.field = new FormGroup({ email: new FormControl() });
     component.field = new FormControl();
 
