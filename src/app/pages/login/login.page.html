@@ -11,10 +11,7 @@
             <ion-label position="floating">Email</ion-label>
             <ion-input type="email" formControlName="email"></ion-input>
           </ion-item>
-          <app-error-message
-            [field]="form.get('email')"
-            message="Email is required"
-          ></app-error-message>
+          <app-error-message message="Email is required"></app-error-message>
           <!-- <app-error-message
             *ngIf="form.get('email').touched && form.get('email').errors?.['email']"
             message="Email is invalid"
