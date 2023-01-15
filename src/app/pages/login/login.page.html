@@ -11,25 +11,23 @@
             <ion-label position="floating">Email</ion-label>
             <ion-input type="email" formControlName="email"></ion-input>
           </ion-item>
-          <ion-label
-            color="danger"
-            *ngIf="form.get('email').touched && form.get('email').errors?.['required']"
-            >Email is required</ion-label
-          >
-          <ion-label
-            color="danger"
+          <app-error-message
+            [field]="form.get('email')"
+            message="Email is required"
+          ></app-error-message>
+          <!-- <app-error-message
             *ngIf="form.get('email').touched && form.get('email').errors?.['email']"
-            >Email is invalid</ion-label
-          >
+            message="Email is invalid"
+          ></app-error-message> -->
+
           <ion-item>
             <ion-label position="floating">Password</ion-label>
             <ion-input type="password" formControlName="password"></ion-input>
           </ion-item>
-          <ion-label
-            color="danger"
+          <!-- <app-error-message
             *ngIf="form.get('password').touched && form.get('password').errors?.['required']"
-            >Password is required</ion-label
-          >
+            message="Password is required"
+          ></app-error-message> -->
           <ion-button
             color="dark"
             fill="clear"
