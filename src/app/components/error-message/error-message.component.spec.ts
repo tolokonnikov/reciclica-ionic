@@ -20,13 +20,40 @@ describe('ErrorMessageComponent', () => {
   }));
 
   it('should show error message on field touched and error present', () => {
-    //component.ngOnInit();
-    // component.field = new FormGroup({ email: new FormControl() });
-    component.field = new FormControl();
+    component.field = new FormGroup({ anyField: new FormControl() });
 
-    component.field.markAsUntouched();
-    component.field.setErrors({ required: true });
+    component.field.markAsTouched();
+    component.field.setErrors({ anyError: true });
+    component.error = 'anyError';
 
     expect(component.shouldShowComponent()).toBeTruthy();
+  });
+
+  it('should hide error message on field not touched', () => {
+    component.field = new FormGroup({ anyField: new FormControl() });
+
+    component.field.setErrors({ anyError: true });
+    component.error = 'anyError';
+
+    expect(component.shouldShowComponent()).toBeFalsy();
+  });
+
+  it('should hide error message on field touched, but no error', () => {
+    component.field = new FormGroup({ anyField: new FormControl() });
+
+    component.field.markAsTouched();
+    component.error = 'anyError';
+
+    expect(component.shouldShowComponent()).toBeFalsy();
+  });
+
+  it('should hide error message on field touched and has error, but it is a different error', () => {
+    component.field = new FormGroup({ anyField: new FormControl() });
+
+    component.field.markAsTouched();
+    component.field.setErrors({ anyError: true });
+    component.error = 'anotherError';
+
+    expect(component.shouldShowComponent()).toBeFalsy();
   });
 });
