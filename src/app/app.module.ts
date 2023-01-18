@@ -8,8 +8,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppStoreModule } from 'src/store/AppStoreModule';
-import { StoreDevtools } from '@ngrx/store-devtools';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools/src';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 @NgModule({
   declarations: [AppComponent],
