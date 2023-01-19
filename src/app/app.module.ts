@@ -10,19 +10,21 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppStoreModule } from 'src/store/AppStoreModule';
 import { StoreDevtools } from '@ngrx/store-devtools';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools/src';
+import { ComponentsModule } from "./components/components.module";
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,
-    IonicModule.forRoot(),
-    ...AppStoreModule,
-    StoreDevtoolsModule.instrument({ maxAge: 25 }),
-  ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
-  bootstrap: [AppComponent],
+    declarations: [AppComponent],
+    providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        ReactiveFormsModule,
+        IonicModule.forRoot(),
+        ...AppStoreModule,
+        StoreDevtoolsModule.instrument({ maxAge: 25 }),
+        ComponentsModule
+    ]
 })
 export class AppModule {}

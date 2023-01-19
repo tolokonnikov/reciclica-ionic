@@ -4,6 +4,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { PickupCallCardComponent } from './pickup-call-card/pickup-call-card.component';
 import { ErrorMessageComponent } from './error-message/error-message.component';
+import { LoadingComponent } from './loading/loading.component';
 
 // In this example, MyComponent would be imported as follows:
 // import { MyComponent } from './my-component/my-component.component';
@@ -11,7 +12,8 @@ import { ErrorMessageComponent } from './error-message/error-message.component';
 @NgModule({
   declarations: [
     PickupCallCardComponent,
-    ErrorMessageComponent
+    ErrorMessageComponent,
+    LoadingComponent,
     /*Declare your components here. e.g. MyComponent*/
   ],
   providers: [],
@@ -22,7 +24,8 @@ import { ErrorMessageComponent } from './error-message/error-message.component';
   ],
   exports: [
     PickupCallCardComponent,
-    ErrorMessageComponent
+    ErrorMessageComponent,
+    LoadingComponent,
     /*Same as declarations*/
   ],
 })
