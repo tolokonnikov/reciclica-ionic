@@ -8,13 +8,9 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppStoreModule } from 'src/store/AppStoreModule';
-<<<<<<< HEAD
 import { StoreDevtools } from '@ngrx/store-devtools';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools/src';
 import { ComponentsModule } from "./components/components.module";
-=======
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
->>>>>>> 55de50a71454c7707daed44d77aad0700d559133
 
 @NgModule({
     declarations: [AppComponent],
