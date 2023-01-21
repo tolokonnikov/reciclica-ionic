@@ -11,19 +11,32 @@
             <ion-label position="floating">Email</ion-label>
             <ion-input type="email" formControlName="email"></ion-input>
           </ion-item>
-          <app-error-message [field]="form.get('email')" error="required" message="Email is required"></app-error-message>
-          <app-error-message [field]="form.get('email')" error="email" message="Email is invalid"></app-error-message>
+          <app-error-message
+            [field]="form.get('email')"
+            error="required"
+            message="Email is required"
+          ></app-error-message>
+          <app-error-message
+            [field]="form.get('email')"
+            error="email"
+            message="Email is invalid"
+          ></app-error-message>
 
           <ion-item>
             <ion-label position="floating">Password</ion-label>
             <ion-input type="password" formControlName="password"></ion-input>
           </ion-item>
-          <app-error-message [field]="form.get('password')" error="required" message="Password is required"></app-error-message>
+          <app-error-message
+            [field]="form.get('password')"
+            error="required"
+            message="Password is required"
+          ></app-error-message>
           <ion-button
             color="dark"
             fill="clear"
             size="full"
             [disabled]="!form.get('email').valid"
+            (click)="fogotEmailPassword()"
             >Forgot email/password</ion-button
           >
           <ion-button
